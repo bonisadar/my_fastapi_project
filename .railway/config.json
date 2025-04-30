@@ -1,0 +1,6 @@
+{
+  "deploy": {
+    "image": "my_fastapi_project",
+    "port": "8000"
+  }
+}

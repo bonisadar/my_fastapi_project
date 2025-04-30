@@ -1,0 +1,26 @@
+name: 🚀 Deploy FastAPI to Railway
+
+on:
+  push:
+    branches:
+      - main  # or 'master', whatever your main branch is
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout repo
+        uses: actions/checkout@v4
+
+      - name: 🛠️ Setup Railway CLI
+        run: |
+          curl -fsSL https://railway.app/install.sh | sh
+
+      - name: 🔑 Login to Railway
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+        run: railway login --token $RAILWAY_TOKEN
+
+      - name: 🚀 Deploy
+        run: railway up
