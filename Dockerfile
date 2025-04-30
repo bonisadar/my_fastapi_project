@@ -13,7 +13,7 @@ RUN pip install -r requirements.txt
 # COPY packages/ ./packages/
 # RUN pip install --no-index --find-links=packages -r requirements.txt
 
-# 🚨 This is the critical fix: make sure Python can find 'app' as a package
+# Making sure Python can find 'app' as a package, not used when running locally
 # ENV PYTHONPATH=/app
 
 # Optional: Expose port (if using FastAPI uvicorn server)
