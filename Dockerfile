@@ -14,7 +14,7 @@ RUN pip install -r requirements.txt
 # RUN pip install --no-index --find-links=packages -r requirements.txt
 
 # 🚨 This is the critical fix: make sure Python can find 'app' as a package
-ENV PYTHONPATH=/app
+# ENV PYTHONPATH=/app
 
 # Optional: Expose port (if using FastAPI uvicorn server)
 EXPOSE 8000
