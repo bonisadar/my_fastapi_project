@@ -26,21 +26,21 @@ logger = logging.getLogger(__name__)
 
 
 # ======================= SETUP =======================
-app = FastAPI(title="URL Phishing Detector 🔥")
+app = FastAPI(title="URL Phishing Detector")
 
 @app.on_event("startup")
 async def startup():
     global model
     model = load_model()
     if model is not None:
-        logger.info("✅ Model loaded successfully")
+        logger.info("Model loaded successfully")
     else:
-        logger.error("❌ Model failed to load")
+        logger.error("Model failed to load")
 
 
 @app.get("/")
 def root():
-    return {"message": "✅ FastAPI app running"}
+    return {"message": "FastAPI app running"}
     
 
 

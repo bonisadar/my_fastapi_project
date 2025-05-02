@@ -14,12 +14,12 @@ RUN pip install -r requirements.txt
 # RUN pip install --no-index --find-links=packages -r requirements.txt
 
 # Making sure Python can find 'app' as a package, not used when running locally
-# ENV PYTHONPATH=/app
+ENV PYTHONPATH=/app
 
 # Optional: Expose port (if using FastAPI uvicorn server)
 EXPOSE 8000
 
 # Run the app (adjust as needed)
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 
 
