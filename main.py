@@ -4,14 +4,14 @@ import pickle
 import os
 from fastapi import FastAPI, HTTPException
 
-from app.utils.preprocess import preprocess_url_single
-from app.models import predictor
-from app.models.predictor import load_model, predict
+from utils.preprocess import preprocess_url_single
+from models import predictor
+from models.predictor import load_model, predict
 
 import logging
 from pydantic import BaseModel
 
-from app.schemas.predict import URLRequest 
+from schemas.predict import URLRequest 
 
 import re
 import numpy as np
