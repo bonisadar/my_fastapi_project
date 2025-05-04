@@ -31,7 +31,7 @@ Thumbs.db
 packages/*.whl
 
 # Models (optional if too large or sensitive)
-*.pkl
+
 *.joblib
 *.h5
 models/
