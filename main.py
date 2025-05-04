@@ -33,7 +33,7 @@ async def startup():
     if model is not None:
         logger.info("Model loaded successfully")
     else:
-        logger.error("Model failed to load")
+        logger.error("Model failed to load this is it")
 
 
 @app.get("/")
