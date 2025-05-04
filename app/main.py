@@ -5,6 +5,7 @@ import os
 from fastapi import FastAPI, HTTPException
 
 # from app.utils.preprocess import preprocess_url_single
+from app.models import predictor
 from app.models.predictor import load_model, predict
 
 import logging
