@@ -3,6 +3,7 @@ import pickle
 import os
 import re
 import numpy as np
+import logging
 
 '''def load_model():
     model_path = os.getenv("MODEL_PATH", "model.pkl")
@@ -13,6 +14,9 @@ import numpy as np
     except Exception as e:
         print(f"Error loading model: {e}")
         return None'''
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.INFO)  
         
 def load_model():
     try:
