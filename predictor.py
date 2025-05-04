@@ -4,7 +4,7 @@ import os
 import re
 import numpy as np
 
-def load_model():
+'''def load_model():
     model_path = os.getenv("MODEL_PATH", "model.pkl")
     try:
         with open(model_path, "rb") as f:
@@ -12,7 +12,20 @@ def load_model():
         return model
     except Exception as e:
         print(f"Error loading model: {e}")
+        return None'''
+        
+def load_model():
+    try:
+        model_path = "app/model.pkl"
+        with open(model_path, "rb") as f:
+            model = joblib.load(f)
+        return model
+    except Exception as e:
+        import traceback
+        logger.error("Model failed to load")
+        logger.error(traceback.format_exc())  # <-- Add this
         return None
+
 
 def preprocess_url_single(url: str):
     # 1. Remove spaces
