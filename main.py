@@ -7,7 +7,7 @@ from fastapi import FastAPI, HTTPException
 from utils.preprocess import preprocess_url_single
 #from models import predictor
 #from models.predictor import load_model, predict
-
+from predictor import load_model, predict
 import logging
 from pydantic import BaseModel
 
