@@ -4,6 +4,7 @@ import os
 import re
 import numpy as np
 import logging
+import joblib
 
 '''def load_model():
     model_path = os.getenv("MODEL_PATH", "model.pkl")
