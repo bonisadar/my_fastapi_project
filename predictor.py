@@ -21,7 +21,7 @@ logging.basicConfig(level=logging.INFO)
         
 def load_model():
     try:
-        model_path = "model.pkl"
+        model_path = "app/model.pkl"
         with open(model_path, "rb") as f:
             model = joblib.load(f)
         return model
